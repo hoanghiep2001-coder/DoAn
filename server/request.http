@@ -37,4 +37,18 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhM
 
 ###
 GET http://localhost:5000/api/carts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTA0MzZ9.ZqwGlAXTYVdWIntzEH2aCP0K4bF2JsdwVuWkRA73U7s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTMxMDN9.Do_4fuBLXINNLKa9MpxtkCzvuEAndDO28RlwpvbNods
+
+### 
+PUT http://localhost:5000/api/carts/644b3562276ac3f6e041a6fc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTMxMDN9.Do_4fuBLXINNLKa9MpxtkCzvuEAndDO28RlwpvbNods
+
+{
+    "title": "Du lich Himalaya",
+    "description": "khong di nua lan thu 2",
+    "url": "https://google.com",
+    "status": "overdated"
+}
+
+
