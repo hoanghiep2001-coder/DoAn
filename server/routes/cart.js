@@ -82,4 +82,22 @@ router.put("/:id", verifyToken, async (req, res) => {
   }
 });
 
+router.delete('/:id', verifyToken, async (req, res) => {
+  try {
+    const cartDeleteCondition = { _id: req.params.id, user: req.userId }
+    const deletedCart = await Cart.findOneAndDelete(cartDeleteCondition)
+
+    if (!deletedCart) { 
+      return res
+        .status(401)
+        .json({ message: false, message: "Cart not found or user not authorize" });
+    }
+
+    res.json({ success: true, message: deletedCart })
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ success: false, message: "Internal server " });
+  }
+})
+
 module.exports = router;

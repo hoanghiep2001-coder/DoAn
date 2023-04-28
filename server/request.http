@@ -37,12 +37,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhM
 
 ###
 GET http://localhost:5000/api/carts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTMxMDN9.Do_4fuBLXINNLKa9MpxtkCzvuEAndDO28RlwpvbNods
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTUxODV9.Dfs62eFu0sLVHmpJ1-JnvTCosmfTsA7Itn2aJr0KmpU
 
 ### 
 PUT http://localhost:5000/api/carts/644b3562276ac3f6e041a6fc
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTMxMDN9.Do_4fuBLXINNLKa9MpxtkCzvuEAndDO28RlwpvbNods
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTUxODV9.Dfs62eFu0sLVHmpJ1-JnvTCosmfTsA7Itn2aJr0KmpU
 
 {
     "title": "Du lich Himalaya",
@@ -51,4 +51,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhM
     "status": "overdated"
 }
 
-
+### 
+DELETE http://localhost:5000/api/carts/644b3562276ac3f6e041a6fc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTUxODV9.Dfs62eFu0sLVHmpJ1-JnvTCosmfTsA7Itn2aJr0KmpU
