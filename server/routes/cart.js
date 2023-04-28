@@ -18,7 +18,7 @@ router.post("/", verifyToken, async (req, res) => {
       title,
       description,
       url: url.startsWith("https://") ? url : `https://${url}`,
-      status: status || "overdated",
+      status: status || "onBoard",
       user: req.userId,
     });
 
@@ -30,5 +30,15 @@ router.post("/", verifyToken, async (req, res) => {
     res.status(500).json({ success: false, message: "Internal server " });
   }
 });
+
+router.get('/', verifyToken, async (req, res) => {
+    try {
+        const carts = await Cart.find({ user: req.userId }).populate('user', ['username']);
+        res.json({success: true, carts}) 
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ success: false, message: "Internal server " });
+    }
+})
 
 module.exports = router;

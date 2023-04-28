@@ -27,10 +27,14 @@ Content-Type: application/json
 ####
 POST http://localhost:5000/api/carts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2MTA3OTJ9.ZZ8_2T09aXz4aO0gVpwMshJPNmJigSH5S3b89ndFfs0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTA0MzZ9.ZqwGlAXTYVdWIntzEH2aCP0K4bF2JsdwVuWkRA73U7s
 
 { 
-    "title": "Du lich Hawai",
+    "title": "Du lich Himalaya",
     "description": "4 ngay 3 dem",
-    "url": "shopee.com",
+    "url": "shopee.com"
 }
+
+###
+GET http://localhost:5000/api/carts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDRhMWZhODViZjFkMDBjOGU1MjQyMWYiLCJpYXQiOjE2ODI2NTA0MzZ9.ZqwGlAXTYVdWIntzEH2aCP0K4bF2JsdwVuWkRA73U7s
