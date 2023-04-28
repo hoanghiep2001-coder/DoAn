@@ -1,0 +1,144 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  z-index: 10000;
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 75px;
+}
+
+.search {
+  flex: 1;
+  margin: 0 16px;
+  .search__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-100);
+    border-radius: 32px;
+
+    .search__input-el {
+      line-height: 40px;
+      border: none;
+      outline: none;
+      padding-left: 16px;
+      flex: 1;
+      border-radius: 32px;
+      font-size: 1.4rem;
+      color: var(--silver-100);
+      &::placeholder {
+        font-size: 1.4rem;
+        color: var(--silver-100);
+      }
+    }
+
+    .search__input-icon {
+      padding: 0 16px;
+      height: 100%;
+      cursor: pointer;
+      height: 30px;
+    }
+  }
+
+  #search__keyword {
+    .search__keyword-item {
+      color: #fff;
+      line-height: 14px;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .account {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    .account-icon {
+      font-size: 30px;
+    }
+
+    .account-type {
+      display: flex;
+      flex-direction: column;
+
+      .account-name {
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .cart {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+// menu
+.menu {
+  background-color: var(--yellow-100);
+  line-height: 30px;
+}
+
+.menu__order-checkOrder,
+.menu__category {
+  gap: 12px;
+  cursor: pointer;
+  outline: none !important;
+  display: flex !important;
+  align-items: center;
+  border: none !important;
+  padding: 0 !important;
+  &::after {
+    display: none !important; 
+  }
+}
+
+.menu__category-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.menu__category-title {
+  line-height: 30px;
+}
+
+.menu__order {
+  gap: 12px;
+  line-height: 30px;
+}
+
+.contact {
+  gap: 4px;
+  cursor: pointer;
+}
+
+.contact__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.contact__title {
+  line-height: 30px;
+
+}
+
+.menu__order-title {
+  font-family: "Roboto-Medium";
+  color: var(--black-100);
+  line-height: 30px;
+}

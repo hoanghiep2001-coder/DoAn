@@ -1,0 +1,74 @@
+.product {
+  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.08));
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.product-img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.product-wrapper {
+    padding: 8px 12px 0 !important;
+}
+
+.product-title {
+  display: block;
+  display: -webkit-box;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  -webkit-line-clamp: 3; /* số dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600 !important;
+}
+
+.product-sale {
+  font-size: 16px !important;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--red--100) !important;
+  padding: 4px 12px;
+}
+
+.product-discount {
+    gap: 20px;
+    padding: 4px 12px;
+}
+
+.product-discount-delete {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--silver-200);
+}
+
+.product-discount-percent {
+    color: var(--white-100);
+    background-color: var(--red--100);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.product-discount-place {
+    font-size: 11px;
+    line-height: 14px;
+    color: var(--silver-300);
+}
+
+.product-discount-link {
+    color: var(--black-100);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    display: block;
+    background-color: var(--primary-color);
+    padding: 8px ;
+    text-align: center;
+    border-radius: 24px;
+    &:hover {
+        color: unset;
+    }
+}
