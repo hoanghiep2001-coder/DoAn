@@ -1,7 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
+const verifyToken = require("../middleware/auth");
 const User = require("../models/User");
+
+router.get("/", verifyToken, async (req, res) => {
+  try {
+    const user = await User.findById(req.userId).select("-password");
+
+    if (!user) {
+      return res
+        .status(400)
+        .json({ success: false, message: "User not found" });
+    }
+
+    res.json({ success: true, user });
+  } catch (err) {
+    res.status(500).json({ success: false, message: "Internal server error" });
+  }
+});
 
 router.post("/register", async (req, res) => {
   const { username, password } = req.body;
@@ -69,7 +86,6 @@ router.post("/login", async (req, res) => {
     );
 
     res.json({ success: true, message: "User login Success", accessToken });
-
   } catch (err) {
     res.status(500).json({ success: false, message: "Internal server error" });
   }
