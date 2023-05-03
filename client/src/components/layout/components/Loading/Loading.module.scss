@@ -1,0 +1,28 @@
+@keyframes loadingAnim {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.wrapper {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10000;
+  animation: loadingAnim 2s forwards;
+}
+
+.inner {
+  height: 100vh;
+  background-image: url("../../../../assets/img/icon/loading.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+}

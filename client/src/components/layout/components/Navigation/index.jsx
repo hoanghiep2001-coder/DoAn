@@ -7,8 +7,8 @@ import phone from "../../../../assets/img/icon/phone.svg";
 import shoppingCart from "../../../../assets/img/icon/shopping-cart.svg";
 import searchIcon from "../../../../assets/img/icon/search.svg";
 import Button from "../../../Button";
-// import Input from "../../../Input";
 import { FaUserAlt } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 const cb = classnames.bind(styles);
 function Navigation() {
   return (
@@ -83,7 +83,9 @@ function Navigation() {
                   <span className={cb("account-span", "is-12px")}>
                     Tài khoản
                   </span>
-                  <h3 className={cb("account-name")}>Đăng nhập</h3>
+                  <NavLink className={cb("account-name")} to="/login">
+                    Đăng nhập
+                  </NavLink>
                 </div>
               </div>
               <div className={cb("cart")}>
@@ -119,7 +121,13 @@ function Navigation() {
                 </Dropdown.Menu>
               </Dropdown>
 
-              <div className={cb("menu__order", "d-lg-flex", "align-items-lg-center")}>
+              <div
+                className={cb(
+                  "menu__order",
+                  "d-lg-flex",
+                  "align-items-lg-center"
+                )}
+              >
                 <div
                   className={cb(
                     "contact",

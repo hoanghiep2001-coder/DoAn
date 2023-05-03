@@ -29,7 +29,7 @@ h5,
 h6 {
   font-family: "Roboto-Bold";
   margin-bottom: 0;
-  color: var(--black-100)
+  color: var(--black-100);
 }
 
 body {
@@ -53,24 +53,19 @@ body {
 
 :root {
   --primary-color: #ffbe0f;
-  --yellow-100: #FFFBD2;
+  --yellow-100: #fffbd2;
   --orange-100: #f35801;
   --orange-bg-100: #f6851d;
   --silver-100: #9aa0a5;
   --silver-200: #858c93;
   --silver-300: #717981;
   --silver-400: #d6d9db;
-  --silver-500: #E5E5E5;
+  --silver-500: #e5e5e5;
   --silver-bg-100: #d6d9db;
   --white-100: #ffffff;
   --black-title: #404244;
   --black-100: #302c2c;
   --red--100: #ff5454;
-}
-
-.inner {
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .is-12px {
@@ -81,7 +76,23 @@ body {
   font-size: 14px;
 }
 
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .no-border {
   border: none !important;
 }
 
+.ml-1 {
+  margin-left: 4px;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.ml-3 {
+  margin-left: 12px;
+}

@@ -20,13 +20,17 @@ function ProductContainer() {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countDownRef.current.innerHTML =
-        days + " : " + hours + " : " + minutes + " : " + seconds;
+      if (countDownRef.current) {
+        countDownRef.current.innerHTML =
+          days + " : " + hours + " : " + minutes + " : " + seconds;
+      }
       if (distance < 0) {
         clearInterval(x);
         countDownRef.current.innerHTML = "EXPIRED";
       }
     }, 1000);
+
+    return () => {};
   }, []);
 
   return (
@@ -39,14 +43,15 @@ function ProductContainer() {
         />
       </div>
       <div className={cb("countDown")}>
-        <h3 className={cb("countDown-title")} ref={countDownRef}></h3>
+        <h3 className={cb("countDown-title")} ref={countDownRef}>
+          ""
+        </h3>
       </div>
       <div className="row">
         {api.Home.Product.Container.map((item, index) => {
           return (
-            <div className="col col-lg-2-4">
+            <div className="col col-lg-2-4" key={index}>
               <ProductItem
-                key={index}
                 image={item.path}
                 title={item.title}
                 discount={item.discount}

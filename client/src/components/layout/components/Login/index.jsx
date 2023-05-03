@@ -6,7 +6,7 @@ import logo from "../../../../assets/img/digiBlackLogo.svg";
 import { Button } from "react-bootstrap";
 import { useState, useContext } from "react";
 import { authContext } from "../../../../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 const cb = classnames.bind(styles);
 function Login() {
   const { loginUser } = useContext(authContext);
@@ -77,9 +77,20 @@ function Login() {
                   onChange={onChangeLoginForm}
                 />
               </InputGroup>
-              <Button type="submit" variant="warning">
-                Đăng Nhập
-              </Button>
+              <div className="d-lg-flex">
+                <Button
+                  type="submit"
+                  variant="warning"
+                  className={cb("controls-button", "flex-grow-1")}
+                >
+                  Đăng Nhập
+                </Button>
+                <Button type="button" variant="warning" className="ml-3">
+                  <NavLink to="/" className={cb("controls-button")}>
+                    Trang Chủ
+                  </NavLink>
+                </Button>
+              </div>
             </div>
           </form>
         </div>
