@@ -36,10 +36,15 @@
   line-height: 20px;
 }
 
+.controls-section {
+  gap: 12px;
+}
+
 .controls-button {
   color: var(--black-100);
   font-family: "Roboto-Medium";
   padding: 10px 6px;
+  border-radius: 6px !important;
   &:hover {
     color: var(--black-100);
   }

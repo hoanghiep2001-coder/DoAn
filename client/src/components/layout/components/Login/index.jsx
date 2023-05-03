@@ -77,20 +77,35 @@ function Login() {
                   onChange={onChangeLoginForm}
                 />
               </InputGroup>
-              <div className="d-lg-flex">
+              <InputGroup
+                className={cb("mb-3", "d-lg-flex", "controls-section")}
+              >
                 <Button
-                  type="submit"
+                  type="button"
                   variant="warning"
                   className={cb("controls-button", "flex-grow-1")}
                 >
-                  Đăng Nhập
+                  <NavLink to="/register" className={cb("controls-button")}>
+                    Đăng Ký
+                  </NavLink>
                 </Button>
-                <Button type="button" variant="warning" className="ml-3">
+                <Button
+                  type="button"
+                  variant="warning"
+                  className={cb("ml-3", "controls-button")}
+                >
                   <NavLink to="/" className={cb("controls-button")}>
                     Trang Chủ
                   </NavLink>
                 </Button>
-              </div>
+              </InputGroup>
+              <Button
+                type="submit"
+                variant="warning"
+                className={cb("controls-button", "flex-grow-1")}
+              >
+                Đăng Nhập
+              </Button>
             </div>
           </form>
         </div>

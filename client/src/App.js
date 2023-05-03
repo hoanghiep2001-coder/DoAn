@@ -25,10 +25,10 @@ function App() {
         <link rel="icon" href={logo}></link>
         <title>Digiticket</title>
       </Helmet>
-      {showLoading ? <Loading /> : ""}
       <AuthContextProvider>
         <Router>
           <div className="App">
+            {showLoading ? <Loading /> : ""}
             <Routes>
               {publicRoutes.map((route, index) => {
                 const Page = route.component;
